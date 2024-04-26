@@ -1,0 +1,45 @@
+/* * {
+} */
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gameContainer {
+    max-width: 300px;
+    max-height: 600px;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-content: flex-start
+}
+
+/* .row {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    width: 400px;
+    height: 40px;
+    background-color: grey;
+} */
+
+.tile {
+    width: 28px;
+    height: 28px;
+    border: 1px solid black;
+}
+
+.tetromino {
+    width: 28px;
+    height: 28px;
+    background-color: rgb(47, 143, 222);
+    border: 1px solid black;
+}
+
+/* .test {
+    background-color: blue;
+} */
