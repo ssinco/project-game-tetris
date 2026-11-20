@@ -1,29 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <title>Tetris</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta name="description" content="" />
-    <!-- <link rel="icon" href="favicon.png"> -->
-
-    <link rel="stylesheet" href="style.css">
-    <script defer src="app.js"></script>
-
-
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Tetris</title>
+<link rel="stylesheet" href="style.css">
+<script defer src="app.js"></script>
 </head>
-
 <body>
-  <div class = "header">
-    <h1>Hello, world!</h1>
-    <button id = "startGame">Start Game</button>
-    <button id = "stopGame">Stop Game</button>
+  <h1>TETRIS</h1>
+
+  <div class="game">
+    <div class="board-wrap">
+      <canvas id="board"></canvas>
+      <div class="overlay" id="overlay">
+        <h2 id="overlayTitle">Tetris</h2>
+        <p id="overlayText">Clear lines to score points.</p>
+        <button id="overlayBtn">Start Game</button>
+      </div>
+    </div>
+
+    <div class="side">
+      <div class="box">
+        <div class="label">Next</div>
+        <canvas id="next"></canvas>
+      </div>
+      <div class="box"><div class="label">Score</div><div class="value" id="score">0</div></div>
+      <div class="box"><div class="label">Lines</div><div class="value" id="lines">0</div></div>
+      <div class="box"><div class="label">Level</div><div class="value" id="level">1</div></div>
+      <div class="box"><div class="label">Best</div><div class="value" id="best">0</div></div>
+      <button class="secondary" id="pauseBtn">Pause</button>
+      <div class="keys">
+        <b>← →</b> move<br>
+        <b>↑</b> rotate<br>
+        <b>↓</b> soft drop<br>
+        <b>Space</b> hard drop<br>
+        <b>P</b> pause
+      </div>
+    </div>
   </div>
-  
-  <div class = "gameContainer">
+
+  <div class="touch">
+    <button data-act="left">◀</button>
+    <button data-act="rotate">⟳</button>
+    <button data-act="down">▼</button>
+    <button data-act="right">▶</button>
+    <button data-act="drop">⤓</button>
   </div>
 
 </body>
-
 </html>
